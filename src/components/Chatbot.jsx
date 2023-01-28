@@ -1,4 +1,3 @@
-import "./normal.css";
 import "./chatbot.css";
 import { useState } from "react";
 import Avatar from "./Avatar";
@@ -9,7 +8,7 @@ import Error from "./Error";
 import NavLinks from "./NavLink";
 import BotResponse from "./BotResponse";
 
-function App() {
+const Chatbot = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [inputPrompt, setInputPrompt] = useState("");
   const [chatLog, setChatLog] = useState([]);
@@ -43,7 +42,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="Chatbot">
       <header>
         <div className="menu">
           <button onClick={() => setShowMenu(true)}>
@@ -274,4 +273,4 @@ function App() {
   );
 }
 
-export default App;
+export default Chatbot;
